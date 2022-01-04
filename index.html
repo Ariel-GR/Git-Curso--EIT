@@ -13,7 +13,72 @@
         <h1>GIT</h1>
         <P>Desarrollo Colaborativo</P>
 
-        <p>agrego un monton de cosas ver el git del profe jajajaj</p>
+        <h1>GIT</h1>
+        <p>Desarrollo Colaborativo</p>
+    </header>
+    <section>
+        <h2>Configuración inicial</h2>
+        <article>
+            <h3>Ajustes globales</h3>
+            <p>Se aplicarán a todos los proyectos</p>
+            <ul class="commands">
+                <li><strong>git config --global user.name &lt;usuario></strong> para definir un usuario</li>
+                <li><strong>git config --global user.email &lt;email></strong> para definir un email. Ni el email ni el usuario tienen relación con los datos de gihub.com</li>
+                <li><strong>git config --global core.editor &lt;editor></strong> para definir qué editor de texto usar con git</li>
+                <li><strong>git config alias.&lt;alias> &lt;command></strong> se utiliza para definir un atajo a un comando de git.</li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        <h2>Areas de GIT</h2>
+        <article>
+            <h3>Working Directory</h3>
+            <p>
+                El area de trabajo corresponde a la carpeta donde inicializamos el repositorio de git y realizamos la creacion, edicion y eliminacion de archivos en nuestro proyecto. En esta instancia haremos muy poco uso de la linea de comandos, mas alla de algunas instrucciones basicas.
+            </p>
+            <ul class="commands">
+                <li><strong>dir || ls</strong> muestra el contenido del directorio actual</li>
+                <li><strong>mkdir &lt;name></strong> crea una carpeta con el nombre especificado</li>
+                <li><strong>cd &lt;path></strong> cambia el directorio actual por el seleccionado</li>
+                <li><strong>git init</strong> inicializa un respositorio de git.</li>
+                <li><strong>rm -rf .git</strong> elimina el repositorio de manera forzada</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Staging Area (INDEX)</h3>
+            <p>
+                El area de control de cambios corresponde a un archivo que registra a que elementos le estamos haciendo seguimiento dentro de nuestro proyecto. Cada vez que agregamos un archivo al INDEX se realiza una captura del codigo (SNAPSHOT) que registra los cambios realizados; una vez realizada la misma, podemos descartarla o confirmarla.
+            </p>
+            <ul class="commands">
+                <li><strong>git status</strong> muestra el estado de los archivos con respecto al INDEX, si se esta haciendo seguimiento de los mismos o no, y los posibles resultados son los siguientes:
+                    <ul>
+                        <li><strong>untracked</strong> no se esta haciendo seguimiento y por lo tanto es irrecuperable en caso de perdida</li>
+                        <li><strong>staged</strong> el archivo fue agregado al INDEX, pero aun no se realizo la confirmacion de cambios</li>
+                        <li><strong>commited</strong> los cambios del archivo fueron confirmados en un commit y pueden ser reestablecidos</li>
+                        <li><strong>modified</strong> el archivo difiere con respecto a la ultima confirmacion realizada</li>
+                    </ul>                
+                </li>
+                <li><strong>git diff</strong> compara los cambios del Working Directory con respecto a los almacenados en el INDEX</li>
+                <li><strong>git restore --staged &lt;file></strong> deshace la ultima captura realizada en el INDEX</li>
+                <li><strong>git rm --cached &lt;file></strong> quita el archivo del area de control de cambios</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Repository</h3>
+            <p>
+                El repositorio corresponde a la carpeta .git, donde se almacenan todos los cambios en formato BLOB(Binary Large Object File) utilizando referencias de los nombres implementados en el proyecto. Tambien se utiliza para navegar entre los commits como puntos de control.
+            </p>
+            <ul class="commands">
+                <li><strong>git commit</strong> realiza la confirmacion de cambios de las capturas realizadas</li>
+                <li><strong>git blame &lt;file></strong> muestra el contenido del archivo identificando al autor de cada cambio</li>
+                <li><strong>git log</strong> muestra el historial de confirmacion de forma descendente</li>
+                <li><strong>git checkout &lt;ref></strong> permite movernos dentro del historial de cambios</li>
+                <li><strong>git fetch &lt;remote> &lt;branch></strong> captura los cambios realizados en un repositorio remoto</li>
+                <li><strong>git push &lt;remote> &lt;branch></strong> envia los cambios realizados a un repositorio remoto</li>
+            </ul>
+        </article>
+    </section>
+    <section>
     </header>
 </body>
 </html>
