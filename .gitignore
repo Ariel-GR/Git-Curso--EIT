@@ -1,0 +1,15 @@
+## Caroetas
+docs/
+temp/
+tmp
+node_modules/
+
+##
+~*.doc
+~*.docx
+*.txt
+*.temp
+*.tmp
+*.log*
+*.swp
+
