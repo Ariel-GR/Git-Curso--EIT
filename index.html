@@ -78,6 +78,35 @@
             </ul>
         </article>
     </section>
+    <section>
+        <h2>Apuntadores de GIT</h2>
+        <article>
+            <h3>HEAD</h3>
+            <p>
+                Apuntador Movil que se utiliza para indicar al usuario donde se encuentra actualmente, permite la navegacion dentro del historial de cambios e incluso lo podemos utilizar como referente mediante expresiones como <em>HEAD^</em> o <em>HEAD~1</em> para indicar a cuantos ancestros o commits anteriores hacemos referencia.
+            </p>
+            <ul class="commands">
+                <li><strong>git diff HEAD</strong> compara el contenido del working directory con el ultimo commit emitido.</li>
+                <li><strong>git checkout HEAD~1</strong> mueve el apuntador a la confirmacion anterior a la que nos encontramos actualmente.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>BRANCH</h3>
+            <p>
+                Apuntador dinamico que siempre hace refencia al ultimo commit dentro de la historia en la que encontremos, se utilizan para implementar caracteriscas de prueba, realizar revisiones o correcciones, sin modificar la linea principal del proyecto. Tambien facilitan la navegacion dentro del historial de cambios.
+            </p>
+            <ul class="commands">
+                <li><strong>git diff HEAD</strong> compara el contenido del working directory con el ultimo commit emitido.</li>
+                <li><strong>git checkout HEAD~1</strong> mueve el apuntador a la confirmacion anterior a la que nos encontramos actualmente.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>BRANCH</h3>
+            <p>
+                Apuntador dinamico que siempre hace refencia al ultimo commit dentro de la historia en la que encontremos, se utilizan para implementar caracteriscas de prueba, realizar revisiones o correcciones, sin modificar la linea principal del proyecto. Tambien facilitan la navegacion dentro del historial de cambios.
+            </p>
+        </article>
+    </section>
     <footer>
         <div class="map">
             
@@ -95,5 +124,6 @@
         </p>
 
     </footer>
+    
 </body>
 </html>
