@@ -105,6 +105,28 @@
             <p>
                 Apuntador dinamico que siempre hace refencia al ultimo commit dentro de la historia en la que encontremos, se utilizan para implementar caracteriscas de prueba, realizar revisiones o correcciones, sin modificar la linea principal del proyecto. Tambien facilitan la navegacion dentro del historial de cambios.
             </p>
+            <ul class="commands">
+                <li><strong>git branch</strong> muestra una lista con las ramas del repositorio</li>
+                <li><strong>git branch &lt;name></strong> crea una rama a partir de la posicion actual</li>
+                <li><strong>git branch -d &lt;branch></strong> elimina la rama solamente si los cambios fueron integrados</li>
+                <li><strong>git branch -D &lt;branch></strong> elimina la rama aunque no se hayan integrado los cambios</li>
+                <li><strong>git merge &lt;branch></strong> genera un commit que integra los cambios de la rama seleccionada</li>
+                <li><strong>git push -u &lt;remote> &lt;branch></strong> agrega al repositorio remoto una rama nueva</li>
+                <li><strong>git push -d &lt;remote> &lt;branch></strong> elimina del repositorio remoto la rama seleccionada</li>
+            </ul>
+        </article>
+        <article>
+            <h3>TAG</h3>
+            <p>
+                Apuntador estatico que hace referencia al commit donde se haya aplicado, se utiliza principalmente para el versionado dentro del proyecto y facilita la navegacion a determinadas confirmaciones dentro de la historia del proyecto. Normalmente la estrutura de las etiquetas suele ser <em>v1.0.2</em> donde el primer numero indica la version principal, el segundo la compilacion o integracion de caracteristicas, y el tercero a las correcciones o revisiones.
+            </p>
+            <ul class="commands">
+                <li><strong>git tag</strong> muestra un listado de las etiquetas aplicadas dentro del proyecto</li>
+                <li><strong>git tag &lt;name></strong> crea una etiqueta con el nombre especificado en la posicion actual</li>
+                <li><strong>git tag &lt;new> &lt;old></strong> asigna una nueva etiqueta en la misma posicion que otra existente</li>
+                <li><strong>git tag -d &lt;tag></strong> elimina del proyecto la etiqueta seleccionada</li>
+                <li><strong>git push &lt;remote> --tags</strong> sube al repositorio remoto las etiquetas creadas localmente</li>
+            </ul>
         </article>
     </section>
     <footer>
