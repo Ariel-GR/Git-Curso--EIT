@@ -17,7 +17,36 @@
     /*padding*/
 
     /*listas*/
-
+/*Navegacion*/
+nav{
+    display: flex   ;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #c36, #448);
+}
+nav a{
+    display: block;
+    padding:.5rem; 
+    text-decoration: none;
+    color: #eee;
+}
+.logo{
+    font-weight: bold;
+    letter-spacing: -.1rem;
+    font-size: 1.5rem;
+}
+.menu{
+    width:100%;
+    max-height: 0;
+    overflow: hidden;
+}
+.menu.active{
+    max-height: 640px;
+}
+.menu a:hover{
+    text-shadow: 0 0 .5rem #eee;
+}
 
 /*Small Devices - Smartphones*/
 
